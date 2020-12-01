@@ -1,0 +1,25 @@
+{
+  "branches": ["master"],
+  "verifyConditions": [],
+  "prepare": [
+    "@semantic-release/changelog",
+    "@semantic-release/npm",
+    {
+      "path": "@semantic-release/git",
+      "assets": ["package.json", "package-lock.json", "CHANGELOG.md"],
+      "message": "chore(version-bump): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+    }
+  ],
+  "publish": [],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false
+      }
+    ],
+    "@semantic-release/github"
+  ]
+}
