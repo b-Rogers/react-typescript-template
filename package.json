@@ -41,7 +41,8 @@
     "test:ui": "vitest --ui",
     "test:watch": "vitest",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "version:bump": "semantic-release --extends=./.releaserc.json"
+    "version:bump": "semantic-release --extends=./.releaserc.json",
+    "coverage": "vitest --coverage.enabled --coverage.provider=v8 --coverage.reporter=json-summary --coverage.reporter=json"
   },
   "browserslist": {
     "production": [
