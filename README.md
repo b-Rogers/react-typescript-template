@@ -1,10 +1,10 @@
 ### Base
 
-⚛️ This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Typescript template project
 
 ### Build
 
-⚛️ react-scripts https://github.com/facebook/create-react-app/tree/master/packages/react-scripts
+⚡️ Vite https://vitejs.dev/guide/features.html
 
 ### Linting
 
