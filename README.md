@@ -12,6 +12,7 @@ React + typescript template project
 
 ### Unit testing
 
+⚡️ vitest https://vitest.dev/guide/
 🐙 testing-library https://github.com/testing-library
 
 ### Versioning and releases
