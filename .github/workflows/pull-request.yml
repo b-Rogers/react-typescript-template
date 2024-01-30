@@ -24,11 +24,12 @@ jobs:
         run: npm install
 
       - name: Linting
-        if: success()
         run: npm run lint
 
+      - name: Style Linting
+        run: npm run lint:style
+
       - name: Build
-        if: success()
         run: npm run build
 
       - name: Test & Coverage

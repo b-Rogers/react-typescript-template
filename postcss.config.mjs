@@ -1,0 +1,5 @@
+export const plugins = {
+  'postcss-nested': {},
+  autoprefixer: {},
+  'postcss-preset-env': { stage: 2 },
+};
