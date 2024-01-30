@@ -22,14 +22,14 @@ React + typescript template project
 
 :octocat: GitHub Actions https://github.com/actions
 
-## CI Action:
+**CI Action**:
 
 https://github.com/b-Rogers/react-typescript-template/blob/master/.github/workflows/pull-request.yml
 
-## CD Action:
+**CD Action**:
 
 https://github.com/b-Rogers/react-typescript-template/blob/master/.github/workflows/deployment.yml
 
-## App url:
+**App url**:
 
 https://b-rogers.github.io/react-typescript-template/
