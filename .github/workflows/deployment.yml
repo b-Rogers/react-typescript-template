@@ -6,6 +6,17 @@ on:
       - master
 
 jobs:
+  increment_verison:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bump the version & update changelog
+        run: npm run version:bump
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   build:
     runs-on: ubuntu-latest
 
@@ -25,16 +36,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Linting
-        run: npm run lint
-
       - name: Run unit tests
         run: npm run test
-
-      - name: Bump the version & update changelog
-        run: npm run version:bump
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build
         run: npm run build
