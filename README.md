@@ -1,6 +1,6 @@
 ### Base
 
-Typescript template project
+React + typescript template project
 
 ### Build
 
@@ -18,6 +18,18 @@ Typescript template project
 
 📦🚀 semantic-release https://github.com/semantic-release/semantic-release
 
-### CI
+### CI/CD
 
 :octocat: GitHub Actions https://github.com/actions
+
+## CI Action:
+
+https://github.com/b-Rogers/react-typescript-template/blob/master/.github/workflows/pull-request.yml
+
+## CD Action:
+
+https://github.com/b-Rogers/react-typescript-template/blob/master/.github/workflows/deployment.yml
+
+## App url:
+
+https://b-rogers.github.io/react-typescript-template/

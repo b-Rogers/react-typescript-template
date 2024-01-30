@@ -1,5 +1,5 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite';
+import { defineConfig, configDefaults } from 'vitest/config';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -7,5 +7,6 @@ export default defineConfig({
     setupFiles: ['./vitest-setup.ts'],
     globals: true,
     environment: 'jsdom',
+    exclude: [...configDefaults.exclude],
   },
 });
