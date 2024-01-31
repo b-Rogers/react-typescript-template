@@ -12,6 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Use Node v21.6.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21.6.x
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Bump the version & update changelog
         run: npm run version:bump
         env:
@@ -20,17 +29,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [21.6.x]
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node v${{ matrix.node-version }}
+      - name: Use Node v21.6.x
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 21.6.x
           cache: npm
 
       - name: Install dependencies
