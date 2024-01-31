@@ -48,7 +48,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:style": "stylelint \"**/*.css\"",
     "version:bump": "semantic-release --extends=./.releaserc.json",
-    "coverage": "vitest --coverage.enabled --coverage.provider=v8 --coverage.reporter=json-summary --coverage.reporter=json"
+    "coverage": "vitest --coverage.enabled --coverage.reporter=json-summary --coverage.reporter=json"
   },
   "browserslist": {
     "production": [
