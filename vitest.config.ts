@@ -7,8 +7,9 @@ export default defineConfig({
     setupFiles: ['./vitest-setup.ts'],
     globals: true,
     environment: 'jsdom',
-    exclude: [...configDefaults.exclude],
+    exclude: [...configDefaults.exclude, './src/index.*'],
     coverage: {
+      reporter: ['text', 'json', 'json-summary'],
       thresholds: {
         lines: 80,
         branches: 80,
