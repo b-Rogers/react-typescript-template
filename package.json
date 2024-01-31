@@ -12,9 +12,7 @@
     "@semantic-release/npm": "^11.0.2",
     "@testing-library/jest-dom": "^6.4.0",
     "@testing-library/react": "^14.1.2",
-    "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.11",
-    "@types/node": "^20.11.10",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "@typescript-eslint/eslint-plugin": "^6.20.0",
@@ -48,7 +46,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:style": "stylelint \"**/*.css\"",
     "version:bump": "semantic-release --extends=./.releaserc.json",
-    "coverage": "vitest --coverage.enabled --coverage.provider=v8 --coverage.reporter=json-summary --coverage.reporter=json"
+    "coverage": "vitest run --coverage",
+    "coverage:watch": "vitest --coverage.enabled"
   },
   "browserslist": {
     "production": [
