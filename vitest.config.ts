@@ -9,7 +9,7 @@ export default defineConfig({
     environment: 'jsdom',
     exclude: [...configDefaults.exclude],
     coverage: {
-      exclude: ['.prettierrc.js', '.eslintrc.cjs', 'src/index.tsx', 'vite*'],
+      exclude: ['.prettierrc.js', 'eslint.config.js', 'src/index.tsx', 'vite*'],
       reporter: ['text', 'json', 'json-summary'],
       thresholds: {
         lines: 80,
