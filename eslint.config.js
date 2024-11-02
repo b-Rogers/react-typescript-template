@@ -3,6 +3,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import eslintJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
+import globals from 'globals';
 
 export default [
   eslintJs.configs.recommended,
@@ -19,6 +20,10 @@ export default [
     rules: reactHooks.configs.recommended.rules, // https://github.com/facebook/react/issues/28313
     languageOptions: {
       parser: tseslint.parser,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
     },
   },
 ];
