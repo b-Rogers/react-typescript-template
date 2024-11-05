@@ -17,7 +17,10 @@ export default [
       'react-refresh': reactRefresh,
       'react-hooks': reactHooks,
     },
-    rules: reactHooks.configs.recommended.rules, // https://github.com/facebook/react/issues/28313
+    rules: {
+      ...reactHooks.configs.recommended.rules, // https://github.com/facebook/react/issues/28313
+      'no-unused-vars': 'off',
+    },
     languageOptions: {
       parser: tseslint.parser,
       globals: {
