@@ -12,6 +12,8 @@ export default defineConfig({
       exclude: [
         '.prettierrc.js',
         'eslint.config.js',
+        'routeTree.gen.ts',
+        'src/routes/*',
         'src/index.tsx',
         'vite*',
         'dist/*',
