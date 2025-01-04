@@ -6,6 +6,10 @@ React + typescript template project
 
 ⚡️ Vite https://vitejs.dev/guide/features.html
 
+### Routing
+
+:round_pushpin: https://tanstack.com/router/latest/docs/framework/react/overview
+
 ### Linting
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) eslint https://github.com/eslint/eslint with prettier https://github.com/prettier/prettier
@@ -22,14 +26,6 @@ React + typescript template project
 ### CI/CD
 
 :octocat: GitHub Actions https://github.com/actions
-
-**CI Action**:
-
-https://github.com/b-Rogers/react-typescript-template/blob/master/.github/workflows/pull-request.yml
-
-**CD Action**:
-
-https://github.com/b-Rogers/react-typescript-template/blob/master/.github/workflows/deployment.yml
 
 **App url**:
 
