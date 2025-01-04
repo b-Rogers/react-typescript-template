@@ -8,7 +8,7 @@ React + typescript template project
 
 ### Routing
 
-:round_pushpin: https://tanstack.com/router/latest/docs/framework/react/overview
+:round_pushpin: TanStack Routing https://tanstack.com/router/latest/docs/framework/react/overview
 
 ### Linting
 
