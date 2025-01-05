@@ -33,4 +33,4 @@
 
 **App url**:
 
-👊 https://b-rogers.github.io/react-typescript-template/
+👊 https://b-rogers.github.io/react-typescript-vite-template/
