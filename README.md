@@ -10,6 +10,10 @@ React + typescript template project
 
 :round_pushpin: TanStack Routing https://tanstack.com/router/latest/docs/framework/react/overview
 
+### Data handling
+
+:bar_chart: TanStack Query https://tanstack.com/query/latest/docs/framework/react/overview
+
 ### Linting
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) eslint https://github.com/eslint/eslint with prettier https://github.com/prettier/prettier
