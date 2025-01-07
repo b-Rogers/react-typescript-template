@@ -8,7 +8,6 @@ export default function App() {
       <header className="app-header">
         <h1>Hello World</h1>
       </header>
-      <QueryExample />
     </main>
   );
 }
