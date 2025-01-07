@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/b-Rogers/react-typescript-vite-template/compare/v1.1.0...v1.1.1) (2025-01-07)
+
+
+### Bug Fixes
+
+* tanstack router ([#25](https://github.com/b-Rogers/react-typescript-vite-template/issues/25)) ([6a66316](https://github.com/b-Rogers/react-typescript-vite-template/commit/6a663168bdc2799e43fb49d2d2a9f9619ab3047b))
+
 # [1.1.0](https://github.com/b-Rogers/react-typescript-template/compare/v1.0.0...v1.1.0) (2025-01-05)
 
 
