@@ -13,18 +13,25 @@ import { createFileRoute } from '@tanstack/react-router'
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as IndexImport } from './routes/index'
 
 // Create Virtual Routes
 
-const IndexLazyImport = createFileRoute('/')()
+const QueryLazyImport = createFileRoute('/query')()
 
 // Create/Update Routes
 
-const IndexLazyRoute = IndexLazyImport.update({
+const QueryLazyRoute = QueryLazyImport.update({
+  id: '/query',
+  path: '/query',
+  getParentRoute: () => rootRoute,
+} as any).lazy(() => import('./routes/query.lazy').then((d) => d.Route))
+
+const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+} as any)
 
 // Populate the FileRoutesByPath interface
 
@@ -34,7 +41,14 @@ declare module '@tanstack/react-router' {
       id: '/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexLazyImport
+      preLoaderRoute: typeof IndexImport
+      parentRoute: typeof rootRoute
+    }
+    '/query': {
+      id: '/query'
+      path: '/query'
+      fullPath: '/query'
+      preLoaderRoute: typeof QueryLazyImport
       parentRoute: typeof rootRoute
     }
   }
@@ -43,33 +57,38 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexLazyRoute
+  '/': typeof IndexRoute
+  '/query': typeof QueryLazyRoute
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexLazyRoute
+  '/': typeof IndexRoute
+  '/query': typeof QueryLazyRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
-  '/': typeof IndexLazyRoute
+  '/': typeof IndexRoute
+  '/query': typeof QueryLazyRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/query'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/query'
+  id: '__root__' | '/' | '/query'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
-  IndexLazyRoute: typeof IndexLazyRoute
+  IndexRoute: typeof IndexRoute
+  QueryLazyRoute: typeof QueryLazyRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexLazyRoute: IndexLazyRoute,
+  IndexRoute: IndexRoute,
+  QueryLazyRoute: QueryLazyRoute,
 }
 
 export const routeTree = rootRoute
@@ -82,11 +101,15 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/"
+        "/",
+        "/query"
       ]
     },
     "/": {
-      "filePath": "index.lazy.tsx"
+      "filePath": "index.tsx"
+    },
+    "/query": {
+      "filePath": "query.lazy.tsx"
     }
   }
 }
