@@ -1,4 +1,5 @@
 import createClient from 'openapi-fetch';
+
 import type { paths } from '../openapi-types/query-example';
 import { DEFAULT_HEADERS } from './shared';
 

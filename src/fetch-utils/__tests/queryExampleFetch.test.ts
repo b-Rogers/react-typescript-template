@@ -1,6 +1,7 @@
 import { describe, test, expect, vi } from 'vitest';
-import { queryExampleGet } from '../queryExampleFetch';
 import createClient from 'openapi-fetch';
+
+import { queryExampleGet } from '../queryExampleFetch';
 import { DEFAULT_HEADERS } from '../shared';
 
 vi.mock('openapi-fetch', () => {

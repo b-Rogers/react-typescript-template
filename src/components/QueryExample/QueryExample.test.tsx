@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { useQuery } from '@tanstack/react-query';
+
 import { QueryExample } from '.';
 
 vi.mock('@tanstack/react-query');
