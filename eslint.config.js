@@ -10,7 +10,12 @@ export default [
   eslintPluginPrettierRecommended,
   tseslint.configs.eslintRecommended,
   {
-    ignores: ['**/dist', '.prettierrc.js', '**/routeTree.gen.ts'],
+    ignores: [
+      '**/dist',
+      '.prettierrc.js',
+      '**/routeTree.gen.ts',
+      '**/openapi-types/**',
+    ],
   },
   {
     plugins: {

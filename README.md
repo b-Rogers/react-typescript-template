@@ -14,9 +14,15 @@
 
 :bar_chart: TanStack Query: https://tanstack.com/query/latest/docs/framework/react/overview
 
+### Data Fetching
+
+🪵🐕 OpenApi Fetch: https://openapi-ts.dev/openapi-fetch/ +
+OpenApi Typescript: https://openapi-ts.dev/introduction
+
 ### Linting
 
-🤓 eslint: https://github.com/eslint/eslint with prettier: https://github.com/prettier/prettier
+🤓 eslint: https://github.com/eslint/eslint +
+prettier: https://github.com/prettier/prettier
 
 ### Unit testing
 

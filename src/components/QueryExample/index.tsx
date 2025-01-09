@@ -1,15 +1,16 @@
 import { useQuery } from '@tanstack/react-query';
-import { queryFetch } from '../../utils/queryFetch';
+
+import { queryExampleGet } from '../../fetch-utils/queryExampleFetch';
 
 export function QueryExample() {
   const { isPending, error, data } = useQuery({
     queryKey: ['queryExample'],
-    queryFn: queryFetch('https://api.github.com/repos/TanStack/query'),
+    queryFn: queryExampleGet,
   });
 
   if (error) return <p>An error has occurred: {error.message}</p>;
-
   if (isPending) return <p>Loading...</p>;
+  if (!data) return <p>No data found.</p>;
 
   return (
     <div className="query-example">
