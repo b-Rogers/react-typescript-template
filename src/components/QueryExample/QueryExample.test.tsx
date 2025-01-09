@@ -18,33 +18,6 @@ describe('QueryExample', () => {
     expect(headerElement).toBeInTheDocument();
   });
 
-  test('renders error message when error is provided', () => {
-    vi.mocked(useQuery, { partial: true }).mockReturnValue({
-      data: {},
-      isPending: false,
-      error: { message: 'oops' },
-    });
-
-    render(<QueryExample />);
-    const errorElement = screen.getByText(/An error has occurred: oops/i);
-
-    expect(errorElement).toBeInTheDocument();
-  });
-
-  test('renders loading when isPending is provided', () => {
-    // @ts-ignore - isPending type is false and not boolean...
-    vi.mocked(useQuery, { partial: true }).mockReturnValue({
-      data: {},
-      isPending: true,
-      error: null,
-    });
-
-    render(<QueryExample />);
-    const loadingElement = screen.getByText(/Loading.../i);
-
-    expect(loadingElement).toBeInTheDocument();
-  });
-
   test('renders error as 1st priority', () => {
     // @ts-ignore - isPending type is false and not boolean...
     vi.mocked(useQuery, { partial: true }).mockReturnValue({
@@ -69,6 +42,20 @@ describe('QueryExample', () => {
 
     render(<QueryExample />);
     const loadingElement = screen.getByText(/Loading.../i);
+
+    expect(loadingElement).toBeInTheDocument();
+  });
+
+  test('renders no data as 3rd priority', () => {
+    // @ts-ignore - isPending type is false and not boolean...
+    vi.mocked(useQuery, { partial: true }).mockReturnValue({
+      data: undefined,
+      isPending: false,
+      error: null,
+    });
+
+    render(<QueryExample />);
+    const loadingElement = screen.getByText(/No data found./i);
 
     expect(loadingElement).toBeInTheDocument();
   });
